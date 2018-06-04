@@ -4,19 +4,18 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 import { PlaygroundModule } from './playground/playground.module';
-import { BookListComponent } from './book-list/book-list.component';
+import { BooksModule } from './books/books.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BookListComponent
   ],
   imports: [
     BrowserModule,
 
+    BooksModule,
     PlaygroundModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

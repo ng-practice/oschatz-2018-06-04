@@ -1,14 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { Book } from '../book';
+import { Injectable } from '@angular/core';
+import { Book } from '../contracts/book';
 
-@Component({
-  selector: 'book-list',
-  templateUrl: './book-list.component.html',
-  styleUrls: ['./book-list.component.css']
+@Injectable({
+  providedIn: 'root'
 })
-export class BookListComponent {
-  books = this.getBooks();
-
+export class BookService {
   getBooks(): Book[] {
     return [
       {
