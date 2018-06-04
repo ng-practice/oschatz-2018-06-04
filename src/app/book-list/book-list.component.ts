@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Book } from '../book';
 
 @Component({
   selector: 'book-list',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class BookListComponent {
   books = this.getBooks();
 
-  getBooks() {
+  getBooks(): Book[] {
     return [
       {
         title: 'Design Patterns',
