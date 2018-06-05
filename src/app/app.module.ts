@@ -5,7 +5,6 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 import { PlaygroundModule } from './playground/playground.module';
-import { BooksModule } from './books/books.module';
 import { AppRoutingModule } from './app.routing.module';
 
 @NgModule({
@@ -16,7 +15,6 @@ import { AppRoutingModule } from './app.routing.module';
     BrowserModule,
     HttpClientModule,
 
-    BooksModule,
     PlaygroundModule,
 
     AppRoutingModule

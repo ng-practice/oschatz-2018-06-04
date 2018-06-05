@@ -9,6 +9,10 @@ const routes: Route[] = [
     path: '',
     redirectTo: '/books',
     pathMatch: 'full'
+  },
+  {
+    path: 'books',
+    loadChildren: './books/books.module#BooksModule'
   }
 ];
 
