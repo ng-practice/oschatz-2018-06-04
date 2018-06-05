@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 
 import { PlaygroundModule } from './playground/playground.module';
 import { BooksModule } from './books/books.module';
+import { AppRoutingModule } from './app.routing.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,9 @@ import { BooksModule } from './books/books.module';
     HttpClientModule,
 
     BooksModule,
-    PlaygroundModule
+    PlaygroundModule,
+
+    AppRoutingModule
   ],
   bootstrap: [AppComponent]
 })
