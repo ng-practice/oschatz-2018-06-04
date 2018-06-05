@@ -10,7 +10,7 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./book-detail.component.css']
 })
 export class BookDetailComponent implements OnInit, OnDestroy {
-  book: Book;
+  book: Book = {} as any;
   subscription = Subscription.EMPTY;
 
   constructor(
