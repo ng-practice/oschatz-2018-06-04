@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Book } from '../contracts/book';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BookService {
-  getBooks(): Book[] {
-    return [
+  getBooks(): Observable<Book[]> {
+    return of([
       {
         title: 'Design Patterns',
         subtitle: 'Elements of Reusable Object-Oriented Software',
@@ -49,6 +50,6 @@ export class BookService {
           url: 'https://www.nostarch.com/'
         }
       }
-    ];
+    ]);
   }
 }

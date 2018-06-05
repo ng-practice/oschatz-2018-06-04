@@ -7,8 +7,17 @@ import { BookService } from '../lib/book.service';
   templateUrl: './book-list.component.html',
   styleUrls: ['./book-list.component.css']
 })
-export class BookListComponent {
-  books = this.bookService.getBooks();
+export class BookListComponent implements OnInit {
+  books: Book[];
 
   constructor(private bookService: BookService) {}
+
+  ngOnInit() {
+    this.bookService.getBooks()
+      .subscribe(
+        books => (this.books = books),
+        err => {},
+        () => console.info('NO DATA TO SHOW')
+      );
+  }
 }
