@@ -8,4 +8,6 @@
     {{ book.abstract }}
   </p>
   <a [routerLink]="['/books', book.isbn]">Details</a>
+  |
+  <a [routerLink]="['/books', 'edit' , book.isbn]">Edit</a>
 </div>

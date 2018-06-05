@@ -5,6 +5,7 @@ import { BookDetailComponent } from './book-detail/book-detail.component';
 import { BookListComponent } from './book-list/book-list.component';
 import { BooksComponent } from './books.component';
 import { CanLeaveGuard } from './lib/can-leave.guard';
+import { BookEditComponent } from './book-edit/book-edit.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,10 @@ const routes: Routes = [
       {
         component: BookDetailComponent,
         path: ':isbn'
+      },
+      {
+        component: BookEditComponent,
+        path: 'edit/:isbn'
       }
     ]
   }
