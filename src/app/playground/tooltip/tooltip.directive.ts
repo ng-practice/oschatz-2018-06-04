@@ -1,18 +1,33 @@
-import { Directive, HostListener, Input } from '@angular/core';
+import {
+  Directive,
+  HostListener,
+  Input,
+  Renderer2,
+  ElementRef
+} from '@angular/core';
 
 @Directive({
   selector: '[tooltip]'
 })
 export class TooltipDirective {
-  @Input() tooltip: string;
+  tooltipElement: HTMLDivElement;
+
+  @Input()
+  set tooltip(message: string) {
+    this.renderer.setProperty(this.tooltipElement, 'innerHTML', message);
+  }
+
+  constructor(private renderer: Renderer2, private element: ElementRef) {
+    this.tooltipElement = this.renderer.createElement('div');
+  }
 
   @HostListener('mouseenter')
   onMouseEnter() {
-    console.log('mouse hit', this.tooltip);
+    this.renderer.appendChild(this.element.nativeElement, this.tooltipElement);
   }
 
   @HostListener('mouseleave')
   onmouseleave() {
-    console.log('mouse left', this.tooltip);
+    this.renderer.removeChild(this.element.nativeElement, this.tooltipElement);
   }
 }
