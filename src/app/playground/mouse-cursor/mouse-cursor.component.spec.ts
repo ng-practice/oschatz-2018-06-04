@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MouseCursorComponent } from './mouse-cursor.component';
 
-describe('MouseCursorComponent', () => {
+xdescribe('MouseCursorComponent', () => {
   let component: MouseCursorComponent;
   let fixture: ComponentFixture<MouseCursorComponent>;
 
