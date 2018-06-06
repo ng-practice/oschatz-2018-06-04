@@ -1,5 +1,8 @@
 <top-nav></top-nav>
 
-<title-box title="Angular Workshop" (titleClicked)="logMessage($event)"></title-box>
+<title-box 
+    title="Angular Workshop"
+    tooltip="My Directive works! :)"
+    (titleClicked)="logMessage($event)"></title-box>
 
 <router-outlet></router-outlet>

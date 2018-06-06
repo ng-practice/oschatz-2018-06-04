@@ -1,17 +1,23 @@
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { PlaygroundModule } from '../playground/playground.module';
+import { BookCreateComponent } from './book-create/book-create.component';
 import { BookDetailComponent } from './book-detail/book-detail.component';
+import { BookEditComponent } from './book-edit/book-edit.component';
 import { BookListComponent } from './book-list/book-list.component';
 import { BooksComponent } from './books.component';
 import { BooksRoutingModule } from './books.routing.module';
-import { BookEditComponent } from './book-edit/book-edit.component';
-import { BookCreateComponent } from './book-create/book-create.component';
 
 @NgModule({
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, BooksRoutingModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    PlaygroundModule,
+    BooksRoutingModule
+  ],
   declarations: [
     BookListComponent,
     BookDetailComponent,

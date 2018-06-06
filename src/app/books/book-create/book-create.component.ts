@@ -4,7 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'book-create',
   templateUrl: './book-create.component.html',
-  styleUrls: ['./book-create.component.css']
+  styleUrls: ['./book-create.component.scss']
 })
 export class BookCreateComponent implements OnInit {
   form: FormGroup;
