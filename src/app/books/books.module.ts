@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
@@ -8,14 +8,16 @@ import { BookListComponent } from './book-list/book-list.component';
 import { BooksComponent } from './books.component';
 import { BooksRoutingModule } from './books.routing.module';
 import { BookEditComponent } from './book-edit/book-edit.component';
+import { BookCreateComponent } from './book-create/book-create.component';
 
 @NgModule({
-  imports: [CommonModule, FormsModule, BooksRoutingModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, BooksRoutingModule],
   declarations: [
     BookListComponent,
     BookDetailComponent,
     BooksComponent,
-    BookEditComponent
+    BookEditComponent,
+    BookCreateComponent
   ],
   exports: [BookListComponent]
 })

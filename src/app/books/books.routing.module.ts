@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { BookCreateComponent } from './book-create/book-create.component';
 import { BookDetailComponent } from './book-detail/book-detail.component';
+import { BookEditComponent } from './book-edit/book-edit.component';
 import { BookListComponent } from './book-list/book-list.component';
 import { BooksComponent } from './books.component';
-import { CanLeaveGuard } from './lib/can-leave.guard';
-import { BookEditComponent } from './book-edit/book-edit.component';
 
 const routes: Routes = [
   {
@@ -15,6 +15,10 @@ const routes: Routes = [
       {
         component: BookListComponent,
         path: ''
+      },
+      {
+        component: BookCreateComponent,
+        path: 'create'
       },
       {
         component: BookDetailComponent,
