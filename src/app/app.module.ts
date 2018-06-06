@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 
 import { PlaygroundModule } from './playground/playground.module';
 import { AppRoutingModule } from './app.routing.module';
+import { TopNavComponent } from './top-nav/top-nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    TopNavComponent,
   ],
   imports: [
     BrowserModule,
